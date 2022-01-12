@@ -1,0 +1,14 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      {{ currentProduct.name }}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content> {{ currentProduct.description }} </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="accent" (click)="onClick()">
+      Comprar {{ currentProduct.price | currency
+      }}<mat-icon>add_shopping_cart</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

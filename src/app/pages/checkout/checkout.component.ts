@@ -60,7 +60,7 @@ export class CheckoutComponent implements OnInit {
           const details = this.prepareDetails();
           return this.dataSvc.saveDetailsOrder({ details, orderId });
         }),
-        tap(() => this.router.navigate(['/thank-you-page']))
+        tap(() => this.router.navigate(['/checkout/thank-you-page']))
       )
       .subscribe();
   }

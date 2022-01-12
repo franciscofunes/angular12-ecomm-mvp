@@ -1,9 +1,10 @@
 <div class="container">
-  <form class="form item">
+  <form class="form item" (ngSubmit)="onSubmit()" #checkoutForm="ngForm">
     <mat-form-field class="form__element">
       <input
         matInput
         placeholder="Nombre"
+        required
         [(ngModel)]="model.name"
         name="name"
         #name="ngModel"
@@ -29,6 +30,7 @@
     </mat-radio-group>
     <mat-form-field class="form__element">
       <input
+        required
         matInput
         placeholder="Dirección de envío"
         [(ngModel)]="model.shippingAddress"
@@ -41,6 +43,7 @@
     </mat-form-field>
     <mat-form-field class="form__element">
       <input
+        required
         matInput
         placeholder="Ciudad"
         [(ngModel)]="model.city"
@@ -66,7 +69,12 @@
 </div>
 <app-details></app-details>
 <div class="container__button">
-  <button mat-raised-button color="primary" type="submit" [disabled]="">
+  <button
+    [disabled]="!checkoutForm.form.valid"
+    mat-raised-button
+    color="primary"
+    type="submit"
+  >
     Checkout
   </button>
 </div>

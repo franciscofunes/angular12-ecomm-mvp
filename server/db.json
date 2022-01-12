@@ -148,6 +148,18 @@
       },
       "pickup": false,
       "id": 3
+    },
+    {
+      "name": "Xaviera Underwood",
+      "store": {
+        "id": 2,
+        "name": "Store Alcalá",
+        "address": "Calle de Alcalá, 21",
+        "city": "Madrid",
+        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
+      },
+      "pickup": false,
+      "id": 4
     }
   ],
   "detailsOrders": [
@@ -186,6 +198,18 @@
       ],
       "orderId": 3,
       "id": 3
+    },
+    {
+      "details": [
+        {
+          "productId": 1,
+          "productName": "Essential TypeScript 4: From Beginner to Pro",
+          "quantity": 1,
+          "price": 45
+        }
+      ],
+      "orderId": 4,
+      "id": 4
     }
   ]
 }

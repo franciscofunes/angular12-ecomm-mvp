@@ -160,6 +160,25 @@
       },
       "pickup": false,
       "id": 4
+    },
+    {
+      "name": "Jade Meadows",
+      "shippingAddress": "Iure elit animi si",
+      "city": "Dolorem aliquam omni",
+      "isDelivery": true,
+      "id": 5
+    },
+    {
+      "name": "Francisco Funes",
+      "store": {
+        "id": 2,
+        "name": "Store Alcalá",
+        "address": "Calle de Alcalá, 21",
+        "city": "Madrid",
+        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
+      },
+      "isDelivery": false,
+      "id": 6
     }
   ],
   "detailsOrders": [
@@ -210,6 +229,30 @@
       ],
       "orderId": 4,
       "id": 4
+    },
+    {
+      "details": [
+        {
+          "productId": 1,
+          "productName": "Essential TypeScript 4: From Beginner to Pro",
+          "quantity": 1,
+          "price": 45
+        }
+      ],
+      "orderId": 5,
+      "id": 5
+    },
+    {
+      "details": [
+        {
+          "productId": 1,
+          "productName": "Essential TypeScript 4: From Beginner to Pro",
+          "quantity": 2,
+          "price": 45
+        }
+      ],
+      "orderId": 6,
+      "id": 6
     }
   ]
 }

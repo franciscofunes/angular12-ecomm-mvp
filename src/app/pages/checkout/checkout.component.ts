@@ -50,7 +50,7 @@ export class CheckoutComponent implements OnInit {
     const data: Order = {
       ...formData,
       date: this.getCurrentDate,
-      pickup: this.isDelivery,
+      isDelivery: this.isDelivery,
     };
     this.dataSvc
       .saveOrder(data)

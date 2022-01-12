@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="form item" (ngSubmit)="onSubmit()" #checkoutForm="ngForm">
+  <form class="form item" #checkoutForm="ngForm">
     <mat-form-field class="form__element">
       <input
         matInput
@@ -13,7 +13,7 @@
         El nombre es requerido
       </mat-error>
     </mat-form-field>
-    {{ isDelivery }} - isDelivery?
+    <!-- {{ isDelivery }} - isDelivery? -->
     <mat-radio-group class="form__element">
       <p>Elegí una opción</p>
       <mat-radio-button
@@ -62,7 +62,7 @@
       <mat-form-field class="form__element">
         <mat-label>Elegi tu tienda</mat-label>
         <mat-select #store="ngModel" [(ngModel)]="model.store" name="store">
-          <mat-option *ngFor="let tienda of stores">
+          <mat-option [value]="tienda" *ngFor="let tienda of stores">
             {{ tienda.name }} - {{ tienda.openingHours }}
           </mat-option>
         </mat-select>
@@ -77,6 +77,7 @@
     mat-raised-button
     color="primary"
     type="submit"
+    (click)="onSubmit(checkoutForm)"
   >
     Checkout
   </button>

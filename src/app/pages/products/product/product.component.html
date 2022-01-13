@@ -6,7 +6,12 @@
   </mat-card-header>
   <mat-card-content> {{ currentProduct.description }} </mat-card-content>
   <mat-card-actions>
-    <button mat-flat-button color="accent" (click)="onClick()">
+    <button
+      mat-flat-button
+      color="accent"
+      (click)="onClick()"
+      [disabled]="currentProduct.stock === 0"
+    >
       Comprar {{ currentProduct.price | currency
       }}<mat-icon>add_shopping_cart</mat-icon>
     </button>

@@ -7,10 +7,15 @@ import { Product } from '../interface/product.interface';
   providedIn: 'root',
 })
 export class ProductsService {
-  private apiUrl = 'http://localhost:4400/products';
+  private apiURL = 'http://localhost:4400/products';
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.apiUrl);
+    return this.http.get<Product[]>(this.apiURL);
+  }
+
+  updateStock(productId: number, stock: number): Observable<any> {
+    const body = { stock: stock };
+    return this.http.patch<any>(`${this.apiURL}/${productId}`, body);
   }
 }

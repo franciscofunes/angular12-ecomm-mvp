@@ -10,6 +10,7 @@ import { Store } from 'src/app/shared/components/header/interfaces/stores.interf
 import { DataService } from 'src/app/shared/components/header/services/data.service';
 import { ShoppingCarService } from 'src/app/shared/components/header/services/shopping-car.service';
 import { Product } from '../products/interface/product.interface';
+import { ProductsService } from '../products/services/products.service';
 
 @Component({
   selector: 'app-checkout',
@@ -32,7 +33,8 @@ export class CheckoutComponent implements OnInit {
   constructor(
     private dataSvc: DataService,
     private shoppingCartSvc: ShoppingCarService,
-    private router: Router
+    private router: Router,
+    private productSvc: ProductsService
   ) {}
 
   ngOnInit(): void {
@@ -88,6 +90,13 @@ export class CheckoutComponent implements OnInit {
         price: price,
         stock,
       } = product;
+      const updatedStock = stock - quantity;
+      this.productSvc
+        .updateStock(productId, updatedStock)
+        .pipe(
+          tap(() => details.push({ productId, productName, quantity, price }))
+        )
+        .subscribe();
       details.push({ productId, productName, quantity, price });
     });
     return details;

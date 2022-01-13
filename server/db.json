@@ -65,7 +65,7 @@
       "price": 5,
       "description": "En Hackeando del cerebro de tus compradores, Corti nos revela cómo muchas compañías crean productos digitales o procesos de venta capaces de conectar con la psicología del comprador.",
       "categoryId": 1,
-      "stock": 10
+      "stock": 8
     },
     {
       "id": 3,
@@ -179,6 +179,30 @@
       },
       "isDelivery": false,
       "id": 6
+    },
+    {
+      "name": "Francisco Funes",
+      "store": {
+        "id": 2,
+        "name": "Store Alcalá",
+        "address": "Calle de Alcalá, 21",
+        "city": "Madrid",
+        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
+      },
+      "isDelivery": false,
+      "id": 7
+    },
+    {
+      "name": "Francisco Funes",
+      "store": {
+        "id": 3,
+        "name": "Chambers and West Broadway",
+        "address": "125 Chambers Street",
+        "city": "New York",
+        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
+      },
+      "isDelivery": false,
+      "id": 8
     }
   ],
   "detailsOrders": [
@@ -253,6 +277,30 @@
       ],
       "orderId": 6,
       "id": 6
+    },
+    {
+      "details": [
+        {
+          "productId": 2,
+          "productName": "Hackeando el cerebro de tus compradores: PsychoGrowth",
+          "quantity": 2,
+          "price": 5
+        }
+      ],
+      "orderId": 7,
+      "id": 7
+    },
+    {
+      "details": [
+        {
+          "productId": 2,
+          "productName": "Hackeando el cerebro de tus compradores: PsychoGrowth",
+          "quantity": 2,
+          "price": 5
+        }
+      ],
+      "orderId": 8,
+      "id": 8
     }
   ]
 }

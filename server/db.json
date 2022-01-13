@@ -65,7 +65,7 @@
       "price": 5,
       "description": "En Hackeando del cerebro de tus compradores, Corti nos revela cómo muchas compañías crean productos digitales o procesos de venta capaces de conectar con la psicología del comprador.",
       "categoryId": 1,
-      "stock": 7
+      "stock": 6
     },
     {
       "id": 3,
@@ -97,7 +97,7 @@
       "price": 7,
       "description": "HDMI A Male to A Male Cable: Supports Ethernet, 3D, 4K video and Audio Return Channel (ARC)",
       "categoryId": 2,
-      "stock": 10
+      "stock": 9
     },
     {
       "id": 7,
@@ -113,7 +113,7 @@
       "price": 20,
       "description": "Plug & play. Easy to use,powered by USB port. No external driver and Power needed. Just plug it into your USB port and the DVD driver will be detected",
       "categoryId": 3,
-      "stock": 10
+      "stock": 9
     }
   ],
   "orders": [
